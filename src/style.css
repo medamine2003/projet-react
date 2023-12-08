@@ -1,0 +1,175 @@
+body {
+  background-color: #26547C;
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.add-button {
+  background-color: #EF476F;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width:80%;
+  height:12vh;
+}
+
+.add-button:hover {
+  background-color: #005f75;
+}
+
+.checklist-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+.checklist-form label {
+  margin-bottom: 10px;
+}
+
+.checklist-form input,
+.checklist-form textarea,
+.checklist-form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #FFD166;
+}
+
+.checklist-form button {
+  padding: 10px;
+  background-color: #EF476F;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checklist-form button:hover {
+  background-color: #EF476F;
+}
+.save{
+  padding: 10px;
+  background-color: #EF476F;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.delete  {
+  border: 5px solid black;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit{
+  border: 5px solid black;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  width:50vw;
+  border: 5px solid black;
+  margin-bottom: 20px; /* Ajoute un margin-bottom pour l'espacement entre les cartes */
+  background-color: #FFD166;
+  height:100vh;
+}
+
+@media only screen and (min-width: 769px) {
+  .card {
+    max-width: 80%; /* Largeur plus grande pour les cartes sur desktop */
+  }
+  .add-button{
+    max-width: 80%;
+  }
+}
+/* Styles pour la version responsive */
+
+@media only screen and (max-width: 768px) {
+  .check {
+    border: 5px solid black;
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .checklist-form ul {
+    margin-left: 20px;
+  }
+
+  .delete {
+    margin-top: 10px;
+  }
+
+  .add-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+
+/* Ajustement du bouton Edit pour les écrans plus petits */
+@media only screen and (max-width: 500px) {
+  .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
+/* Positionnement des éléments dans la checklist */
+@media only screen and (max-width: 768px) {
+  .checklist-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+  }
+  .card {
+    max-width: 100%; /* Largeur plus grande pour les cartes sur desktop */
+    margin-bottom: 20px;
+  }
+  .checklist-form label {
+    text-align: center;
+    width: 100%;
+  }
+
+  .checklist-form button {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+ 
+}
