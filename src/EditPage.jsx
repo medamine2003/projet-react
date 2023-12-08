@@ -1,3 +1,4 @@
+//import des hooks et fonctions crées dans api.jsx
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getChecklist, editChecklist,modifyChecklistStatus  } from './api';
@@ -8,7 +9,7 @@ const EditPage = () => {
   const [selectedChecklist, setSelectedChecklist] = useState(null);
   const [newTask, setNewTask] = useState('');
   const [checklistState, setChecklistState] = useState(0); 
-
+//récupération de la checklist choisie pour la modifier
   useEffect(() => {
     const fetchChecklistDetails = async () => {
       try {
@@ -54,7 +55,6 @@ const EditPage = () => {
 
   const handleSaveEdit = async () => {
     try {
-        //selectedChecklist.state = parseInt(checklistState);
         await editChecklist(id, selectedChecklist);
         await modifyChecklistStatus(id, checklistState)
         navigate(`/`)
@@ -66,7 +66,7 @@ const EditPage = () => {
   if (!selectedChecklist) {
     return <div>Loading...</div>;
   }
-console.log(checklistState);
+// composant EditPage pour gérer la modification des checklists 
   return (
     <div>
       <h2>Edit Checklist</h2>
